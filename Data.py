@@ -52,13 +52,6 @@ class Data:
         x_resampled, y_resampled = smote.fit_resample(X, Y)
         return (x_resampled, y_resampled)
 
-    def visualizer(self,data,title,location):
-        
-        self.plt.subplot(location[0],location[1],location[2])
-        self.plt.title(title)
-        self.plt.bar(['Ham', 'Spam'], [len(data[data == 0]), len(data[data == 1])])
-        self.plt.xlabel('Class')
-        self.plt.ylabel('Count')
         
     def data_convertor_tfidf(self,sentiment):
         vectorizer = TfidfVectorizer()
