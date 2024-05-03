@@ -53,7 +53,7 @@ class Model:
         model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
  
-        model.fit(train[0], train[1], epochs=12, batch_size=32)
+        model.fit(train[0], train[1], epochs=10, batch_size=32)
     
 
         loss, accuracy = model.evaluate(test[0], test[1])
@@ -75,7 +75,8 @@ class Model:
 
         if self.algorithm == "SVM":
             message_vector, label = obj.data_convertor(sentiment)
-            train_data, test_data = obj.data_split(message_vector, label)
+            oversampled_message, oversampeld_label = obj.oversample_data(message_vector, label )
+            train_data, test_data = obj.data_split(oversampled_message, oversampeld_label)
             cr,cm,acc = self.svm_classifier(train_data,test_data)
             if sentiment:
                 print(f"Accuracy with Sentiment Analysis for SVM: {acc}")
@@ -86,7 +87,6 @@ class Model:
 
         elif self.algorithm == "KMeans":
             message_vector, label = obj.data_convertor_tfidf(sentiment)
-            
             
             if sentiment:
                 seed = 2300
@@ -114,7 +114,8 @@ class Model:
             encoder = LabelEncoder()
             encoder.fit(["ham","spam"])
             required_labels = encoder.transform(data["Label"])
-            train_data, test_data = obj.data_split(padded_data,required_labels)
+            oversampled_message, oversampeld_label = obj.oversample_data(padded_data,required_labels)
+            train_data, test_data = obj.data_split(oversampled_message, oversampeld_label)
 
             cr,cm,acc = self.cnn(train_data,test_data)
             if sentiment:

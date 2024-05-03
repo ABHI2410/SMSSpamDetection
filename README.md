@@ -23,11 +23,11 @@ run the code:
 
 
 
-|      Model      | Regular Accuracy | Accuracy with Sentiment Analysis  |
-|:---------------:|:----------------:|:--------------------------:|
-|      SVM        |      98.296      |           98.3856          |
-|     KMeans      |      89.932      |           71.1953          |
-|      CNN        |      98.744      |           98.9238          |
+|      Model      |      Regular Accuracy    | Accuracy with Sentiment Analysis  |
+|:---------------:|:------------------------:|:---------------------------------:|
+|      SVM        |      95.80310880829016   |         99.68911917098445         |
+|     KMeans      |      89.93180186647524   |         71.19526202440775         |
+|      CNN        |      89.63730335235596   |         91.19170904159546         |
 
 
 <center>Confussion matrix</center>
