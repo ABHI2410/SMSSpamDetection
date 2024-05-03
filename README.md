@@ -23,14 +23,9 @@ run the code:
 
 
 
-Accuracy with Sentiment Analysis for SVM: 98.38565022421525
+|      Model      | Regular Accuracy | Accuracy with Sentiment Analysis  |
+|:---------------:|:----------------:|:--------------------------:|
+|      SVM        |      98.296      |           98.3856          |
+|     KMeans      |      89.932      |           71.1953          |
+|      CNN        |      98.744      |           98.9238          |
 
-Accuracy with Sentiment Analysis for KMeans: 71.19526202440775
-
-Accuracy with sentiment Analysis for CNN: 98.92376661300659
-
-Accuracy for SVM: 98.29596412556054
-
-Accuracy for KMeans: 89.93180186647524
-
-Accuracy for CNN: 98.74439239501953
