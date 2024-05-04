@@ -34,7 +34,7 @@ class Data:
             except LookupError:
                 nltk.download('stopwords')
                 nltk.download('punkt')
-                stop = nltk.corpus.stopwords.words('english')
+                stop_words = nltk.corpus.stopwords.words('english')
             text_without_punctuation = text.translate(str.maketrans('', '', string.punctuation))
             tokens = nltk.tokenize.word_tokenize(text_without_punctuation)
             filtered_tokens = [word for word in tokens if word.lower() not in stop_words]

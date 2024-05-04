@@ -80,9 +80,11 @@ class Model:
             cr,cm,acc = self.svm_classifier(train_data,test_data)
             if sentiment:
                 print(f"Accuracy with Sentiment Analysis for SVM: {acc}")
+                print(cr)
                 obj.plot_and_save_confusion_matrix(cm,"SVM with sentiment", "SVM_Sentiment.jpeg")
             else: 
                 print(f"Accuracy for SVM: {acc}")
+                print(cr)
                 obj.plot_and_save_confusion_matrix(cm,"SVM", "SVM.jpeg")
 
         elif self.algorithm == "KMeans":
@@ -92,11 +94,13 @@ class Model:
                 seed = 2300
                 cr,cm,acc = self.kmeans_clustering(message_vector,label,seed)
                 print(f"Accuracy with Sentiment Analysis for KMeans: {acc}")
+                print(cr)
                 obj.plot_and_save_confusion_matrix(cm,"KMeans with sentiment", "KMeans_Sentiment.jpeg")
             else: 
                 seed = 2344 
                 cr,cm,acc = self.kmeans_clustering(message_vector,label,seed)
                 print(f"Accuracy for KMeans: {acc}")
+                print(cr)
                 obj.plot_and_save_confusion_matrix(cm,"KMeans", "KMeans.jpeg")
 
 
@@ -120,10 +124,11 @@ class Model:
             cr,cm,acc = self.cnn(train_data,test_data)
             if sentiment:
                 print(f"Accuracy with sentiment Analysis for CNN: {acc}")
-
+                print(cr)
                 obj.plot_and_save_confusion_matrix(cm,"CNN with sentiment", "CNN_Sentiment.jpeg")
             else: 
                 print(f"Accuracy for CNN: {acc}")
+                print(cr)
                 obj.plot_and_save_confusion_matrix(cm,"CNN", "CNN.jpeg")
         else: 
             raise ValueError('Invalid Algorithm')
