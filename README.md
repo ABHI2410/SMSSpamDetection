@@ -30,27 +30,7 @@ run the code:
 |      CNN        |      89.63730335235596   |         91.19170904159546         |
 
 
-<center>Confussion matrix</center>
+<center>ROC Curves for models </center>
 
-<div style="display: flex; flex-wrap: wrap;">
-    <div style="flex: 33%; padding: 5px;">
-        <img src="output/SVM.jpeg" alt="Image 1" style="width: 100%;">
-    </div>
-    <div style="flex: 33%; padding: 5px;">
-        <img src="output/KMeans.jpeg" alt="Image 2" style="width: 100%;">
-    </div>
-    <div style="flex: 33%; padding: 5px;">
-        <img src="output/CNN.jpeg" alt="Image 3" style="width: 100%;">
-    </div>
-</div>
-<div style="display: flex; flex-wrap: wrap;">
-    <div style="flex: 33%; padding: 5px;">
-        <img src="output/SVM_Sentiment.jpeg" alt="Image 4" style="width: 100%;">
-    </div>
-    <div style="flex: 33%; padding: 5px;">
-        <img src="output/KMeans_Sentiment.jpeg" alt="Image 5" style="width: 100%;">
-    </div>
-    <div style="flex: 33%; padding: 5px;">
-        <img src="output/CNN_Sentiment.jpeg" alt="Image 6" style="width: 100%;">
-    </div>
-</div>
+![ROC curve without Sentiment Analysis](./output/ROCCurveWithoutSentimentAnalysis.jpeg "ROC curve without Sentiment Analysis")
+![ROC curve with Sentiment Analysis](./output/ROCCurveWithSentimentAnalysis.jpeg "ROC curve with Sentiment Analysis")
